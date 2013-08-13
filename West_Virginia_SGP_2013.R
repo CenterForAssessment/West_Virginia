@@ -23,3 +23,8 @@ West_Virginia_SGP <- updateSGP(
 	sgPlot.demo.report=TRUE,
 	save.intermediate.results=TRUE,
 	parallel.config=list(BACKEND="PARALLEL", WORKERS=list(PERCENTILES=8, PROJECTIONS=8, BASELINE_PERCENTILES=8, LAGGED_PROJECTIONS=8, SUMMARY=24, GA_PLOTS=2)))
+
+
+### Save results
+
+save(West_Virginia_SGP, file="Data/West_Virginia_SGP.Rdata")
