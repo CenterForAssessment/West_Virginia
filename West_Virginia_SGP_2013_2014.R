@@ -22,7 +22,7 @@ West_Virginia_SGP <- updateSGP(
 	West_Virginia_Data_LONG_2013_2014,
 	sgPlot.demo.report=TRUE,
 	save.intermediate.results=TRUE,
-	parallel.config=list(BACKEND="PARALLEL", WORKERS=list(PERCENTILES=8, PROJECTIONS=8, BASELINE_PERCENTILES=8, LAGGED_PROJECTIONS=8, SUMMARY=24, GA_PLOTS=2)))
+	parallel.config=list(BACKEND="PARALLEL", WORKERS=list(PERCENTILES=8, PROJECTIONS=8, BASELINE_PERCENTILES=8, LAGGED_PROJECTIONS=8, SUMMARY=24, GA_PLOTS=2, SG_PLOTS=1)))
 
 
 ### Save results
