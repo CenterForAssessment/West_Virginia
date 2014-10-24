@@ -18,6 +18,7 @@ setnames(West_Virginia_Data_LONG_2013_2014, toupper(names(West_Virginia_Data_LON
 ### Tidy up data
 
 West_Virginia_Data_LONG_2013_2014[,SYEAR:="2014"]
+West_Virginia_Data_LONG_2013_2014[STYP=="C", STYP:="A"]
 West_Virginia_Data_LONG_2013_2014[,STYP:=factor(STYP, labels=c("Not Applicable", "Elementary", "Middle", "Secondary"))]
 West_Virginia_Data_LONG_2013_2014[,SCLS:=as.character(as.numeric(SCLS))]
 West_Virginia_Data_LONG_2013_2014[,SRACE:=factor(SRACE, labels=c("Asian", "Black", "Hispanic", "American Indian", "Multi-Racial", "Pacific Islander", "White"))]
