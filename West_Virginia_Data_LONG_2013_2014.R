@@ -55,6 +55,8 @@ West_Virginia_Data_LONG_2013_2014[,VREC:=as.integer(VREC)]
 West_Virginia_Data_LONG_2013_2014[,VALID_CASE:="VALID_CASE"]
 West_Virginia_Data_LONG_2013_2014[is.na(SUBJECT), VALID_CASE:="INVALID_CASE"]
 
+West_Virginia_Data_LONG_2013_2014[,SSTU:=strtail(paste("0", SSTU, sep=""), 9)]
+
 
 ### Save results
 
