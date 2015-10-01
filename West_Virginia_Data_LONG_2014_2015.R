@@ -50,6 +50,8 @@ West_Virginia_Data_LONG_2014_2015[,MREC:=NULL]
 West_Virginia_Data_LONG_2014_2015[,YEAR_LONG:="2014_2015"]
 West_Virginia_Data_LONG_2014_2015[,VREC:=as.integer(VREC)]
 West_Virginia_Data_LONG_2014_2015[,VALID_CASE:="VALID_CASE"]
+West_Virginia_Data_LONG_2014_2015[,GIFTED:=NULL]
+West_Virginia_Data_LONG_2014_2015[,IRECORD:=NULL]
 
 West_Virginia_Data_LONG_2014_2015[,SCHOOL_NUMBER:=paste(SDIS, SSCH, sep="")]
 
