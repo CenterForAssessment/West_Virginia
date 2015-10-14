@@ -12,7 +12,7 @@ require(SGP)
 
 ### Load Data
 
-West_Virginia_Data_LONG_2014_2015 <- fread("Data/Base_Files/2015_growth_wv.txt", colClasses=rep("character", 28))
+West_Virginia_Data_LONG_2014_2015 <- fread("Data/Base_Files/2015_growth_wv.txt", colClasses=rep("character", 29))
 setnames(West_Virginia_Data_LONG_2014_2015, toupper(names(West_Virginia_Data_LONG_2014_2015)))
 
 ### Tidy up data
@@ -51,6 +51,7 @@ West_Virginia_Data_LONG_2014_2015[,YEAR_LONG:="2014_2015"]
 West_Virginia_Data_LONG_2014_2015[,VREC:=as.integer(VREC)]
 West_Virginia_Data_LONG_2014_2015[,VALID_CASE:="VALID_CASE"]
 West_Virginia_Data_LONG_2014_2015[,GIFTED:=NULL]
+West_Virginia_Data_LONG_2014_2015[,SSEX:=NULL]
 West_Virginia_Data_LONG_2014_2015[,IRECORD:=NULL]
 
 West_Virginia_Data_LONG_2014_2015[,SCHOOL_NUMBER:=paste(SDIS, SSCH, sep="")]
