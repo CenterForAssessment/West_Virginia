@@ -12,8 +12,8 @@ options(error=recover)
 
 ### Load data
 
-load("../Dropbox/West_Virginia/Data/West_Virginia_SGP.Rdata")
-load("../Dropbox/West_Virginia/Data/West_Virginia_Data_LONG_2014_2015.Rdata")
+load("Data/West_Virginia_SGP.Rdata")
+load("Data/West_Virginia_Data_LONG_2014_2015.Rdata")
 
 
 ### updateSGP
