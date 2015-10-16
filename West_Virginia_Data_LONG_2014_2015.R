@@ -35,7 +35,7 @@ West_Virginia_Data_LONG_2014_2015[,SSTAA:=factor('Y', levels=c('N', 'Y'), labels
 West_Virginia_Data_LONG_2014_2015[,FORM_TYPE:=factor(FORM_TYPE)]
 West_Virginia_Data_LONG_2014_2015[,SCALE_SCORE:=as.numeric(SCALE_SCORE)]
 West_Virginia_Data_LONG_2014_2015[SCALE_SCORE==0,SCALE_SCORE:=as.numeric(NA)]
-West_Virginia_Data_LONG_2014_2015[PLEVEL==" ",PLEVEL:=as.character(NA)]
+West_Virginia_Data_LONG_2014_2015[PLEVEL=="",PLEVEL:=as.character(NA)]
 West_Virginia_Data_LONG_2014_2015[!is.na(PLEVEL), PLEVEL:=paste("Level", PLEVEL)]
 West_Virginia_Data_LONG_2014_2015[,NAME:=factor(NAME)]
 levels(West_Virginia_Data_LONG_2014_2015$NAME) <- sapply(levels(West_Virginia_Data_LONG_2014_2015$NAME), capwords)
@@ -55,6 +55,12 @@ West_Virginia_Data_LONG_2014_2015[,SSEX:=NULL]
 West_Virginia_Data_LONG_2014_2015[,IRECORD:=NULL]
 
 West_Virginia_Data_LONG_2014_2015[,SCHOOL_NUMBER:=paste(SDIS, SSCH, sep="")]
+
+setkeyv(West_Virginia_Data_LONG_2014_2015, c("VALID_CASE", "SUBJECT", "SYEAR", "SSTU", "SCLS", "SCALE_SCORE"))
+setkeyv(West_Virginia_Data_LONG_2014_2015, c("VALID_CASE", "SUBJECT", "SYEAR", "SSTU"))
+West_Virginia_Data_LONG_2014_2015[["VALID_CASE"]][which(duplicated(West_Virginia_Data_LONG_2014_2015))-1] <- "INVALID_CASE"
+West_Virginia_Data_LONG_2014_2015 <- West_Virginia_Data_LONG_2014_2015[VALID_CASE!="INVALID_CASE"]
+
 
 ### Save results
 
