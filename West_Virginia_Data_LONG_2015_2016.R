@@ -55,6 +55,12 @@ West_Virginia_Data_LONG_2015_2016[,IRECORD:=NULL]
 
 West_Virginia_Data_LONG_2015_2016[,SCHOOL_NUMBER:=paste(SDIS, SSCH, sep="")]
 
+
+### INVALIDATE 12th GRADE scores
+
+West_Virginia_Data_LONG_2015_2016[SCLS=="12", VALID_CASE:="INVALID_CASE"]
+
+
 ### Save results
 
 setkey(West_Virginia_Data_LONG_2015_2016, VALID_CASE, SUBJECT, SYEAR, SSTU)
