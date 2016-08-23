@@ -1,0 +1,845 @@
+
+Started updateSGP Monday August 22 13:41:40 2016
+
+
+	updateSGP(
+		 what_sgp_object = West_Virginia_SGP
+		with_sgp_data_LONG = West_Virginia_Data_LONG_2015_2016
+		sgp.percentiles = TRUE
+		sgp.projections = TRUE
+		sgp.projections.lagged = TRUE
+		sgp.percentiles.baseline = FALSE
+		sgp.projections.baseline = FALSE
+		sgp.projections.lagged.baseline = FALSE
+		sgp.target.scale.scores = TRUE
+		sgPlot.demo.report = TRUE
+		parallel.config = list(BACKEND = "PARALLEL", WORKERS = list(PERCENTILES = 2, PROJECTIONS = 2, BASELINE_PERCENTILES = 2, LAGGED_PROJECTIONS = 2, SGP_SCALE_SCORE_TARGETS = 2, SUMMARY = 2, GA_PLOTS = 2, SG_PLOTS = 1)) )
+
+
+Started prepareSGP Monday August 22 13:41:40 2016
+
+
+	prepareSGP(
+		 data = with_sgp_data_LONG
+		state = state
+		create.additional.variables = FALSE
+		fix.duplicates = NULL )
+
+Finished prepareSGP Monday August 22 13:41:40 2016 in 0.7 Seconds 
+
+
+Started prepareSGP Monday August 22 13:41:48 2016
+
+
+	prepareSGP(
+		 data = what_sgp_object
+		state = state
+		fix.duplicates = fix.duplicates )
+
+Finished prepareSGP Monday August 22 13:42:18 2016 in 29.709 Seconds 
+
+
+Started abcSGP Monday August 22 13:42:18 2016
+
+
+	abcSGP(
+		 sgp_object = what_sgp_object
+		state = state
+		steps = (steps %w/o% "prepareSGP")
+		years = update.years
+		content_areas = update.content_areas
+		grades = update.grades
+		sgp.percentiles = sgp.percentiles
+		sgp.projections = sgp.projections
+		sgp.projections.lagged = sgp.projections.lagged
+		sgp.percentiles.baseline = sgp.percentiles.baseline
+		sgp.projections.baseline = sgp.projections.baseline
+		sgp.projections.lagged.baseline = sgp.projections.lagged.baseline
+		sgp.use.my.coefficient.matrices = sgp.use.my.coefficient.matrices
+		sgp.target.scale.scores = sgp.target.scale.scores
+		sgp.target.scale.scores.only = sgp.target.scale.scores.only
+		sgp.test.cohort.size = sgp.test.cohort.size
+		return.sgp.test.results = return.sgp.test.results
+		simulate.sgps = simulate.sgps
+		calculate.simex = calculate.simex
+		calculate.simex.baseline = calculate.simex.baseline
+		goodness.of.fit.print = goodness.of.fit.print
+		parallel.config = parallel.config
+		save.intermediate.results = save.intermediate.results
+		save.old.summaries = save.old.summaries
+		sgPlot.demo.report = sgPlot.demo.report
+		sgp.config = sgp.config
+		plot.types = plot.types
+		outputSGP.output.type = outputSGP.output.type
+		sgp.percentiles.equated = sgp.percentiles.equated
+		sgp.percentiles.equating.method = sgp.percentiles.equating.method
+		sgp.percentiles.calculate.sgps = sgp.percentiles.calculate.sgps
+		SGPt = SGPt )
+
+	CSEMs are required in SGPstateData to simulate SGPs for confidence interval calculations. Confidence intervals will not be calculated.
+
+Started analyzeSGP Monday August 22 13:42:18 2016
+
+
+	analyzeSGP(
+		 sgp_object = sgp_object
+		state = state
+		years = years
+		content_areas = content_areas
+		grades = grades
+		sgp.percentiles = sgp.percentiles
+		sgp.projections = sgp.projections
+		sgp.projections.lagged = sgp.projections.lagged
+		sgp.percentiles.baseline = sgp.percentiles.baseline
+		sgp.projections.baseline = sgp.projections.baseline
+		sgp.projections.lagged.baseline = sgp.projections.lagged.baseline
+		sgp.minimum.default.panel.years = sgp.minimum.default.panel.years
+		sgp.use.my.coefficient.matrices = sgp.use.my.coefficient.matrices
+		sgp.test.cohort.size = sgp.test.cohort.size
+		return.sgp.test.results = return.sgp.test.results
+		simulate.sgps = simulate.sgps
+		calculate.simex = calculate.simex
+		calculate.simex.baseline = calculate.simex.baseline
+		goodness.of.fit.print = goodness.of.fit.print
+		sgp.config = sgp.config
+		parallel.config = parallel.config
+		verbose.output = verbose.output
+		get.cohort.data.info = get.cohort.data.info
+		sgp.sqlite = sgp.sqlite
+		sgp.percentiles.equated = sgp.percentiles.equated
+		sgp.percentiles.equating.method = sgp.percentiles.equating.method
+		sgp.percentiles.calculate.sgps = sgp.percentiles.calculate.sgps
+		SGPt = SGPt )
+
+	Started studentGrowthPercentiles: Monday August 22 13:42:23 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 8, 9, 10, 11  (N=14,376)
+	Finished studentGrowthPercentiles: Monday August 22 13:43:29 2016 in 1 Minute, 5 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:42:23 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 7, 8, 9, 10  (N=15,955)
+	Finished studentGrowthPercentiles: Monday August 22 13:43:37 2016 in 1 Minute, 14 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:43:29 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 6, 7, 8, 9  (N=16,549)
+	Finished studentGrowthPercentiles: Monday August 22 13:44:46 2016 in 1 Minute, 17 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:43:37 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 5, 6, 7, 8  (N=16,910)
+	Finished studentGrowthPercentiles: Monday August 22 13:44:57 2016 in 1 Minute, 20 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:44:46 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 4, 5, 6, 7  (N=16,569)
+	Finished studentGrowthPercentiles: Monday August 22 13:46:03 2016 in 1 Minute, 18 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:44:57 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 3, 4, 5, 6  (N=16,851)
+	Finished studentGrowthPercentiles: Monday August 22 13:46:17 2016 in 1 Minute, 20 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:46:17 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 3, 4  (N=16,643)
+	Finished studentGrowthPercentiles: Monday August 22 13:46:37 2016 in 19.518 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:46:03 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 3, 4, 5  (N=16,857)
+	Finished studentGrowthPercentiles: Monday August 22 13:46:50 2016 in 46.21 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:46:37 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 8, 9, 10, 11  (N=14,392)
+	Finished studentGrowthPercentiles: Monday August 22 13:47:39 2016 in 1 Minute, 2 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:46:50 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 7, 8, 9, 10  (N=15,968)
+	Finished studentGrowthPercentiles: Monday August 22 13:47:57 2016 in 1 Minute, 7 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:47:39 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 6, 7, 8, 9  (N=16,592)
+	Finished studentGrowthPercentiles: Monday August 22 13:49:01 2016 in 1 Minute, 23 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:47:57 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 5, 6, 7, 8  (N=16,913)
+	Finished studentGrowthPercentiles: Monday August 22 13:49:22 2016 in 1 Minute, 25 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:49:02 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 4, 5, 6, 7  (N=16,583)
+	Finished studentGrowthPercentiles: Monday August 22 13:50:26 2016 in 1 Minute, 24 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:49:22 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 3, 4, 5, 6  (N=16,825)
+	Finished studentGrowthPercentiles: Monday August 22 13:50:49 2016 in 1 Minute, 27 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:50:49 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 3, 4  (N=16,643)
+	Finished studentGrowthPercentiles: Monday August 22 13:51:10 2016 in 21.251 Seconds
+
+	Started studentGrowthPercentiles: Monday August 22 13:50:26 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 3, 4, 5  (N=16,851)
+	Finished studentGrowthPercentiles: Monday August 22 13:51:14 2016 in 47.771 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:51:14 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 4  (N=19,384)
+	Finished studentGrowthProjections: Monday August 22 13:51:26 2016 in 11.963 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:51:14 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 3  (N=20,106)
+	Finished studentGrowthProjections: Monday August 22 13:51:27 2016 in 12.709 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:51:26 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 5  (N=19,589)
+	Finished studentGrowthProjections: Monday August 22 13:51:37 2016 in 11.044 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:51:27 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 6  (N=19,681)
+	Finished studentGrowthProjections: Monday August 22 13:51:37 2016 in 10.632 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:51:37 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 7  (N=19,462)
+	Finished studentGrowthProjections: Monday August 22 13:51:48 2016 in 10.907 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:51:37 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 8  (N=19,767)
+	Finished studentGrowthProjections: Monday August 22 13:51:49 2016 in 11.189 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:51:49 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 10  (N=18,935)
+	Finished studentGrowthProjections: Monday August 22 13:51:55 2016 in 5.739 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:51:48 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 9  (N=20,545)
+	Finished studentGrowthProjections: Monday August 22 13:51:59 2016 in 10.648 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:51:55 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 3  (N=20,113)
+	Finished studentGrowthProjections: Monday August 22 13:52:07 2016 in 12.468 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:51:59 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 4  (N=19,393)
+	Finished studentGrowthProjections: Monday August 22 13:52:11 2016 in 11.708 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:52:07 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 5  (N=19,598)
+	Finished studentGrowthProjections: Monday August 22 13:52:24 2016 in 16.781 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:52:11 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 6  (N=19,685)
+	Finished studentGrowthProjections: Monday August 22 13:52:29 2016 in 17.95 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:52:24 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 7  (N=19,468)
+	Finished studentGrowthProjections: Monday August 22 13:52:42 2016 in 17.778 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:52:29 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 8  (N=19,774)
+	Finished studentGrowthProjections: Monday August 22 13:52:45 2016 in 16.375 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:52:46 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 10  (N=18,958)
+	Finished studentGrowthProjections: Monday August 22 13:52:50 2016 in 4.3 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:52:42 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 9  (N=20,546)
+	Finished studentGrowthProjections: Monday August 22 13:52:50 2016 in 7.773 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:52:51 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 4 LAGGED (N=16,863)
+	Finished studentGrowthProjections: Monday August 22 13:53:16 2016 in 25.724 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:52:51 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 3 LAGGED (N=16,652)
+	Finished studentGrowthProjections: Monday August 22 13:53:19 2016 in 28.042 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:53:19 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 6 LAGGED (N=16,598)
+	Finished studentGrowthProjections: Monday August 22 13:53:35 2016 in 15.895 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:53:16 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 5 LAGGED (N=16,844)
+	Finished studentGrowthProjections: Monday August 22 13:53:36 2016 in 19.39 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:53:36 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 8 LAGGED (N=16,657)
+	Finished studentGrowthProjections: Monday August 22 13:53:46 2016 in 9.846 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:53:35 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 7 LAGGED (N=16,939)
+	Finished studentGrowthProjections: Monday August 22 13:53:48 2016 in 12.885 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:53:48 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 10 LAGGED (N=14,447)
+	Finished studentGrowthProjections: Monday August 22 13:53:52 2016 in 3.869 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:53:46 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 9 LAGGED (N=16,057)
+	Finished studentGrowthProjections: Monday August 22 13:53:53 2016 in 6.988 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:53:53 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 4 LAGGED (N=16,862)
+	Finished studentGrowthProjections: Monday August 22 13:54:15 2016 in 22.356 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:53:52 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 3 LAGGED (N=16,647)
+	Finished studentGrowthProjections: Monday August 22 13:54:17 2016 in 24.822 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:54:17 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 6 LAGGED (N=16,582)
+	Finished studentGrowthProjections: Monday August 22 13:54:40 2016 in 23.355 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:54:15 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 5 LAGGED (N=16,867)
+	Finished studentGrowthProjections: Monday August 22 13:54:42 2016 in 26.776 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:54:42 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 8 LAGGED (N=16,621)
+	Finished studentGrowthProjections: Monday August 22 13:54:52 2016 in 9.521 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:54:40 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 7 LAGGED (N=16,931)
+	Finished studentGrowthProjections: Monday August 22 13:54:53 2016 in 13.406 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:54:54 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 10 LAGGED (N=14,419)
+	Finished studentGrowthProjections: Monday August 22 13:54:57 2016 in 3.7 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:54:52 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 9 LAGGED (N=16,030)
+	Finished studentGrowthProjections: Monday August 22 13:54:59 2016 in 6.534 Seconds
+
+Finished analyzeSGP Monday August 22 13:56:18 2016 in 13 Minutes, 60 Seconds 
+
+Started combineSGP Monday August 22 13:59:28 2016
+	Started studentGrowthProjections: Monday August 22 13:59:51 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 4 TARGET_SCALE_SCORES (N=19,384)
+	Finished studentGrowthProjections: Monday August 22 14:00:09 2016 in 17.845 Seconds
+
+	Started studentGrowthProjections: Monday August 22 13:59:51 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 3 TARGET_SCALE_SCORES (N=20,106)
+	Finished studentGrowthProjections: Monday August 22 14:00:09 2016 in 18.474 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:00:09 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 5 TARGET_SCALE_SCORES (N=19,589)
+	Finished studentGrowthProjections: Monday August 22 14:00:23 2016 in 13.941 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:00:09 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 6 TARGET_SCALE_SCORES (N=19,681)
+	Finished studentGrowthProjections: Monday August 22 14:00:23 2016 in 13.426 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:00:23 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 7 TARGET_SCALE_SCORES (N=19,462)
+	Finished studentGrowthProjections: Monday August 22 14:00:39 2016 in 15.883 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:00:23 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 8 TARGET_SCALE_SCORES (N=19,767)
+	Finished studentGrowthProjections: Monday August 22 14:00:39 2016 in 15.713 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:00:39 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 9 TARGET_SCALE_SCORES (N=20,545)
+	Finished studentGrowthProjections: Monday August 22 14:00:46 2016 in 7.305 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:00:53 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 3 LAGGED.TARGET_SCALE_SCORES (N=16,652)
+	Finished studentGrowthProjections: Monday August 22 14:01:00 2016 in 7.997 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:00:53 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 4 LAGGED.TARGET_SCALE_SCORES (N=16,863)
+	Finished studentGrowthProjections: Monday August 22 14:01:01 2016 in 8.226 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:01:01 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 5 LAGGED.TARGET_SCALE_SCORES (N=16,844)
+	Finished studentGrowthProjections: Monday August 22 14:01:09 2016 in 8.336 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:01:01 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 6 LAGGED.TARGET_SCALE_SCORES (N=16,598)
+	Finished studentGrowthProjections: Monday August 22 14:01:09 2016 in 8.351 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:01:09 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 7 LAGGED.TARGET_SCALE_SCORES (N=16,939)
+	Finished studentGrowthProjections: Monday August 22 14:01:18 2016 in 8.663 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:01:09 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 8 LAGGED.TARGET_SCALE_SCORES (N=16,657)
+	Finished studentGrowthProjections: Monday August 22 14:01:18 2016 in 8.533 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:01:18 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 10 LAGGED.TARGET_SCALE_SCORES (N=14,447)
+	Finished studentGrowthProjections: Monday August 22 14:01:21 2016 in 3.006 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:01:18 2016
+		Content Area: MATHEMATICS, Year: 2015_2016, Grade Progression: 9 LAGGED.TARGET_SCALE_SCORES (N=16,057)
+	Finished studentGrowthProjections: Monday August 22 14:01:23 2016 in 5.499 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:01:28 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 4 TARGET_SCALE_SCORES (N=19,393)
+	Finished studentGrowthProjections: Monday August 22 14:01:39 2016 in 11.721 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:01:28 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 3 TARGET_SCALE_SCORES (N=20,113)
+	Finished studentGrowthProjections: Monday August 22 14:01:41 2016 in 12.847 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:01:40 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 5 TARGET_SCALE_SCORES (N=19,598)
+	Finished studentGrowthProjections: Monday August 22 14:01:53 2016 in 13.675 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:01:41 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 6 TARGET_SCALE_SCORES (N=19,685)
+	Finished studentGrowthProjections: Monday August 22 14:01:53 2016 in 12.776 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:01:54 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 7 TARGET_SCALE_SCORES (N=19,468)
+	Finished studentGrowthProjections: Monday August 22 14:02:08 2016 in 14.336 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:01:54 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 8 TARGET_SCALE_SCORES (N=19,774)
+	Finished studentGrowthProjections: Monday August 22 14:02:09 2016 in 15.076 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:02:08 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 9 TARGET_SCALE_SCORES (N=20,546)
+	Finished studentGrowthProjections: Monday August 22 14:02:17 2016 in 8.752 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:02:22 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 3 LAGGED.TARGET_SCALE_SCORES (N=16,647)
+	Finished studentGrowthProjections: Monday August 22 14:02:38 2016 in 16.127 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:02:22 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 4 LAGGED.TARGET_SCALE_SCORES (N=16,862)
+	Finished studentGrowthProjections: Monday August 22 14:02:38 2016 in 16.192 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:02:38 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 6 LAGGED.TARGET_SCALE_SCORES (N=16,582)
+	Finished studentGrowthProjections: Monday August 22 14:02:53 2016 in 14.988 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:02:38 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 5 LAGGED.TARGET_SCALE_SCORES (N=16,867)
+	Finished studentGrowthProjections: Monday August 22 14:02:54 2016 in 15.275 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:02:54 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 8 LAGGED.TARGET_SCALE_SCORES (N=16,621)
+	Finished studentGrowthProjections: Monday August 22 14:03:08 2016 in 14.27 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:02:54 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 7 LAGGED.TARGET_SCALE_SCORES (N=16,931)
+	Finished studentGrowthProjections: Monday August 22 14:03:08 2016 in 14.627 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:03:08 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 10 LAGGED.TARGET_SCALE_SCORES (N=14,419)
+	Finished studentGrowthProjections: Monday August 22 14:03:13 2016 in 4.183 Seconds
+
+	Started studentGrowthProjections: Monday August 22 14:03:08 2016
+		Content Area: READING, Year: 2015_2016, Grade Progression: 9 LAGGED.TARGET_SCALE_SCORES (N=16,030)
+	Finished studentGrowthProjections: Monday August 22 14:03:16 2016 in 8.137 Seconds
+
+Finished combineSGP Monday August 22 14:03:17 2016 in 3 Minutes, 49 Seconds 
+
+
+Started summarizeSGP Monday August 22 14:06:12 2016
+
+
+	summarizeSGP(
+		 sgp_object = sgp_object
+		state = state
+		years = years
+		content_areas = content_areas
+		sgp.summaries = sgp.summaries
+		summary.groups = summary.groups
+		confidence.interval.groups = confidence.interval.groups
+		save.old.summaries = save.old.summaries
+		parallel.config = parallel.config )
+
+	NOTE: Saving @Summary slot to Data/West_Virginia_SGP_Summary_2014_2015.Rdata and then deleting @Summary slot.
+	Finished with STATE, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, STATE_ENROLLMENT_STATUS
+	Finished with STATE, GRADE, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, GRADE, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, GRADE, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, GRADE, STATE_ENROLLMENT_STATUS
+	Finished with STATE, ETHNICITY, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, ETHNICITY, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, ETHNICITY, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, ETHNICITY, STATE_ENROLLMENT_STATUS
+	Finished with STATE, GRADE, ETHNICITY, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, GRADE, ETHNICITY, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, GRADE, ETHNICITY, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, GRADE, ETHNICITY, STATE_ENROLLMENT_STATUS
+	Finished with STATE, LEP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, LEP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, LEP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, LEP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, GRADE, LEP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, GRADE, LEP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, GRADE, LEP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, SPED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, GRADE, LEP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, SPED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, SPED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, GRADE, SPED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, SPED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, GRADE, SPED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, GRADE, SPED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, DISABILITY_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, GRADE, SPED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, DISABILITY_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, DISABILITY_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, DISABILITY_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, GRADE, DISABILITY_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, GRADE, DISABILITY_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, GRADE, DISABILITY_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, GRADE, DISABILITY_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, SES_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, SES_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, SES_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, GRADE, SES_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, SES_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, GRADE, SES_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, GRADE, SES_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, GENDER, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, GRADE, SES_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, GENDER, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, GENDER, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, GENDER, STATE_ENROLLMENT_STATUS
+	Finished with STATE, GRADE, GENDER, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, GRADE, GENDER, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, GRADE, GENDER, STATE_ENROLLMENT_STATUS
+	Finished with STATE, MIGRANT_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, GRADE, GENDER, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, MIGRANT_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, MIGRANT_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, MIGRANT_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, GRADE, MIGRANT_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, GRADE, MIGRANT_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, GRADE, MIGRANT_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, HIGH_NEED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, GRADE, MIGRANT_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, HIGH_NEED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, HIGH_NEED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, HIGH_NEED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, GRADE, HIGH_NEED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, GRADE, HIGH_NEED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, GRADE, HIGH_NEED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CATCH_UP_KEEP_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, GRADE, HIGH_NEED_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, CATCH_UP_KEEP_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, CATCH_UP_KEEP_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, CATCH_UP_KEEP_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, GRADE, CATCH_UP_KEEP_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, GRADE, CATCH_UP_KEEP_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, GRADE, CATCH_UP_KEEP_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, MOVE_UP_STAY_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, GRADE, CATCH_UP_KEEP_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, MOVE_UP_STAY_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, MOVE_UP_STAY_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, MOVE_UP_STAY_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, GRADE, MOVE_UP_STAY_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, GRADE, MOVE_UP_STAY_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, GRADE, MOVE_UP_STAY_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, ACHIEVEMENT_LEVEL_PRIOR, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, GRADE, MOVE_UP_STAY_UP_STATUS, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, ACHIEVEMENT_LEVEL_PRIOR, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, ACHIEVEMENT_LEVEL_PRIOR, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, ACHIEVEMENT_LEVEL_PRIOR, STATE_ENROLLMENT_STATUS
+	Finished with STATE, GRADE, ACHIEVEMENT_LEVEL_PRIOR, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, GRADE, ACHIEVEMENT_LEVEL_PRIOR, STATE_ENROLLMENT_STATUS
+	Finished with STATE, YEAR, GRADE, ACHIEVEMENT_LEVEL_PRIOR, STATE_ENROLLMENT_STATUS
+	Finished with STATE, CONTENT_AREA, YEAR, GRADE, ACHIEVEMENT_LEVEL_PRIOR, STATE_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, GRADE, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, GRADE, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, GRADE, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, ETHNICITY, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, GRADE, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, ETHNICITY, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, ETHNICITY, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, ETHNICITY, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, GRADE, ETHNICITY, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, GRADE, ETHNICITY, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, GRADE, ETHNICITY, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, LEP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, LEP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, LEP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, LEP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, GRADE, ETHNICITY, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, GRADE, LEP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, GRADE, LEP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, GRADE, LEP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, SPED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, GRADE, LEP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, SPED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, SPED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, SPED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, GRADE, SPED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, GRADE, SPED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, GRADE, SPED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, DISABILITY_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, DISABILITY_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, GRADE, SPED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, DISABILITY_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, DISABILITY_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, GRADE, DISABILITY_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, GRADE, DISABILITY_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, GRADE, DISABILITY_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, SES_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, GRADE, DISABILITY_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, SES_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, SES_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, SES_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, GRADE, SES_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, GRADE, SES_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, GRADE, SES_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, GENDER, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, GENDER, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, GRADE, SES_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, GENDER, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, GENDER, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, GRADE, GENDER, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, GRADE, GENDER, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, GRADE, GENDER, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, MIGRANT_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, GRADE, GENDER, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, MIGRANT_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, MIGRANT_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, MIGRANT_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, GRADE, MIGRANT_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, GRADE, MIGRANT_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, GRADE, MIGRANT_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, HIGH_NEED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, GRADE, MIGRANT_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, HIGH_NEED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, HIGH_NEED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, HIGH_NEED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, GRADE, HIGH_NEED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, GRADE, HIGH_NEED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, GRADE, HIGH_NEED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CATCH_UP_KEEP_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, CATCH_UP_KEEP_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, GRADE, HIGH_NEED_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, CATCH_UP_KEEP_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, CATCH_UP_KEEP_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, GRADE, CATCH_UP_KEEP_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, GRADE, CATCH_UP_KEEP_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, GRADE, CATCH_UP_KEEP_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, MOVE_UP_STAY_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, MOVE_UP_STAY_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, MOVE_UP_STAY_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, GRADE, CATCH_UP_KEEP_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, MOVE_UP_STAY_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, GRADE, MOVE_UP_STAY_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, GRADE, MOVE_UP_STAY_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, GRADE, MOVE_UP_STAY_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, ACHIEVEMENT_LEVEL_PRIOR, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, ACHIEVEMENT_LEVEL_PRIOR, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, GRADE, MOVE_UP_STAY_UP_STATUS, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, ACHIEVEMENT_LEVEL_PRIOR, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, ACHIEVEMENT_LEVEL_PRIOR, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, GRADE, ACHIEVEMENT_LEVEL_PRIOR, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, GRADE, ACHIEVEMENT_LEVEL_PRIOR, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, YEAR, GRADE, ACHIEVEMENT_LEVEL_PRIOR, DISTRICT_ENROLLMENT_STATUS
+	Finished with DISTRICT_NUMBER, CONTENT_AREA, YEAR, GRADE, ACHIEVEMENT_LEVEL_PRIOR, DISTRICT_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, GRADE, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, GRADE, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, GRADE, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, GRADE, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, GRADE, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, GRADE, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, GRADE, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, GRADE, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, GRADE, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, GRADE, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, GRADE, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, GRADE, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, GRADE, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, GRADE, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, GRADE, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, GRADE, ETHNICITY, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, GRADE, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, GRADE, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, GRADE, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, GRADE, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, GRADE, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, GRADE, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, GRADE, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, GRADE, LEP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, GRADE, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, GRADE, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, GRADE, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, GRADE, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, GRADE, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, GRADE, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, GRADE, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, GRADE, SPED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, GRADE, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, GRADE, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, GRADE, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, GRADE, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, GRADE, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, GRADE, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, GRADE, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, GRADE, DISABILITY_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, GRADE, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, GRADE, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, GRADE, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, GRADE, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, GRADE, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, GRADE, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, GRADE, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, GRADE, SES_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, GRADE, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, GRADE, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, GRADE, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, GRADE, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, GRADE, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, GRADE, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, GRADE, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, GRADE, GENDER, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, GRADE, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, GRADE, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, GRADE, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, GRADE, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, GRADE, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, GRADE, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, GRADE, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, GRADE, MIGRANT_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, GRADE, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, GRADE, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, GRADE, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, GRADE, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, GRADE, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, GRADE, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, GRADE, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, GRADE, HIGH_NEED_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, GRADE, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, GRADE, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, GRADE, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, GRADE, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, GRADE, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, GRADE, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, GRADE, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, GRADE, CATCH_UP_KEEP_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, GRADE, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, GRADE, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, GRADE, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, GRADE, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, GRADE, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, GRADE, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, GRADE, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, GRADE, MOVE_UP_STAY_UP_STATUS, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, GRADE, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, GRADE, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, GRADE, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, GRADE, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, YEAR, GRADE, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, YEAR, GRADE, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, CONTENT_AREA, YEAR, GRADE, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+	Finished with SCHOOL_NUMBER, EMH_LEVEL, CONTENT_AREA, YEAR, GRADE, ACHIEVEMENT_LEVEL_PRIOR, SCHOOL_ENROLLMENT_STATUS
+Finished summarizeSGP Monday August 22 14:56:46 2016 in 50 Minutes, 34 Seconds 
+
+
+Started visualizeSGP Monday August 22 14:59:33 2016 
+
+Started bubblePlot in visualizeSGP Monday August 22 14:59:33 2016 
+
+Finished bubblePlot in visualizeSGP Monday August 22 14:59:34 2016 in 1.568 Seconds 
+
+Started growthAchievementPlot in visualizeSGP Monday August 22 14:59:34 2016 
+
+Finished growthAchievementPlot in visualizeSGP Monday August 22 15:01:09 2016 in 1 Minute, 35 Seconds 
+
+Started studentGrowthPlot in visualizeSGP Monday August 22 15:01:09 2016 
+
