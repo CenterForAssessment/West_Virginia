@@ -55,6 +55,9 @@ West_Virginia_Data_LONG_2015_2016[,IRECORD:=NULL]
 
 West_Virginia_Data_LONG_2015_2016[,SCHOOL_NUMBER:=paste(SDIS, SSCH, sep="")]
 
+### Fix 8 character IDs by pre-pending a 0
+
+West_Virginia_Data_LONG_2015_2016[nchar(SSTU)==8,SSTU:=paste("0", SSTU, sep="")]
 
 ### INVALIDATE 12th GRADE scores
 
