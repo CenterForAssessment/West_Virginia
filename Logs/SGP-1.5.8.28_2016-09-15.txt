@@ -1,0 +1,9 @@
+
+Started visualizeSGP Thursday September 15 09:31:05 2016 
+
+Started studentGrowthPlot in visualizeSGP Thursday September 15 09:31:05 2016 
+
+Finished studentGrowthPlot in visualizeSGP Thursday September 15 09:33:26 2016 in 2 Minutes, 22 Seconds 
+
+Finished visualizeSGP Thursday September 15 09:33:26 2016 in 2 Minutes, 22 Seconds 
+
