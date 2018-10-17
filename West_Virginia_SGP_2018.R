@@ -23,12 +23,14 @@ West_Virginia_SGP <- prepareSGP(West_Virginia_Data_LONG)
 
 West_Virginia_SGP <- analyzeSGP(
 	West_Virginia_SGP,
+	years=c("2017", "2018"),
 	sgp.percentiles=TRUE,
 	sgp.projections=FALSE,
 	sgp.projections.lagged=FALSE,
 	sgp.percentiles.baseline=FALSE,
 	sgp.projections.baseline=FALSE,
-	sgp.projections.lagged.baseline=FALSE)
+	sgp.projections.lagged.baseline=FALSE,
+	sgp.percentiles.equated=FALSE)
 
 
 ### combineSGP
