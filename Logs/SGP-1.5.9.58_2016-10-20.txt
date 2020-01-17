@@ -1,5 +1,0 @@
-
-Started visualizeSGP Thursday October 20 13:02:45 2016 
-
-Started studentGrowthPlot in visualizeSGP Thursday October 20 13:02:45 2016 
-
